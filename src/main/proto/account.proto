@@ -1,0 +1,13 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package poc.grpc.proto;
+
+message AccountRequest {
+  string bankName = 1;
+}
+message AccountResponse {
+  string res = 1;
+}
+service AccountService {
+  rpc account(AccountRequest) returns (AccountResponse);
+}

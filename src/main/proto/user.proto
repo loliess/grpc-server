@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package poc.grpc.proto;
+
+message UserRequest {
+  string firstName = 1;
+  string lastName = 2;
+  int32 age =3;
+  int32 rollNo = 4;
+}
+
+message UserResponse {
+  string res1 = 1;
+  string res2 = 2;
+}
+
+service UserService {
+  rpc user(UserRequest) returns (UserResponse);
+}
